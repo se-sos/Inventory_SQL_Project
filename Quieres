@@ -1,0 +1,25 @@
+-- =====================================
+-- Inventory Management SQL Toolkit
+-- Author: Sean O'Rourke
+-- Description: Key queries to support inventory analysis
+-- =====================================
+
+-- 🔍 Out of Stock Items
+SELECT item_name, stock_qty
+FROM inventory
+WHERE stock_qty = 0;
+
+-- 🔁 Reorder Point Items
+SELECT item_name, stock_qty, reorder_point
+FROM inventory
+WHERE stock_qty < reorder_point;
+
+-- 🐌 Weak Movers (Low Sales)
+SELECT item_name, units_sold_last_30_days
+FROM inventory
+WHERE units_sold_last_30_days < 5;
+
+-- 🧩 Supplier Breakdown
+SELECT supplier_id, COUNT(*) AS item_count
+FROM inventory
+GROUP BY supplier_id;
