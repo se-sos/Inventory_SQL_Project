@@ -1,0 +1,6 @@
+item_id,item_name,category,stock_qty,reorder_point,supplier_id,last_order_date,units_sold_last_30_days
+001,Widget A,Tools,3,5,SUP01,2025-07-12,11
+002,Cable B,Cables,0,10,SUP02,2025-07-03,3
+003,Gadget C,Gadgets,7,8,SUP03,2025-06-30,2
+004,Part D,Parts,12,5,SUP01,2025-07-15,20
+005,Widget E,Tools,2,4,SUP02,2025-07-10,5
